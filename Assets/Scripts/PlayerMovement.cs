@@ -1,6 +1,9 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer))]
 
 public class PlayerMovement : MonoBehaviour
 {

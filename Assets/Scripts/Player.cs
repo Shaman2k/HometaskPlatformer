@@ -33,7 +33,6 @@ public class Player : MonoBehaviour
         if (collision.TryGetComponent<FinishPoint>(out FinishPoint point))
         {
             LevelComleted?.Invoke();
-            Debug.Log("Win");
         }
     }
 }

@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 
+[RequireComponent(typeof(TMP_Text))]
+
 public class CoinCounter : MonoBehaviour
 {
     [SerializeField] private Player _player;
