@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer _renderer;
     private Transform[] _points;
     private int _currentPoint;
+    private float _playerFootYValue = -0.6f;
+    
 
     private void Awake()
     {
@@ -41,7 +43,7 @@ public class Enemy : MonoBehaviour
         {
             foreach (ContactPoint2D point in collision.contacts)
             {
-                if (point.normal.y <= -0.6f)
+                if (point.normal.y <= _playerFootYValue)
                     Destroy(gameObject);
                 else
                     player.Die();

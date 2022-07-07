@@ -34,14 +34,18 @@ public class GameOverScreen : MonoBehaviour
 
     private void OnDied()
     {
-        _restartText.text = _looseText; 
-        _gameOverGroup.alpha = 1;
-        Time.timeScale = 0;
+        _restartText.text = _looseText;
+        ShowGameOverScreen();
     }
 
     private void OnWin()
     {
         _restartText.text = _winText;
+        ShowGameOverScreen();
+    }
+
+    private void ShowGameOverScreen()
+    {
         _gameOverGroup.alpha = 1;
         Time.timeScale = 0;
     }
